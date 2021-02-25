@@ -25,11 +25,11 @@ import socket
 import struct
 
 #protobuf message includes
-from message_pb2 import HyperionRequest
-from message_pb2 import HyperionReply
-from message_pb2 import ColorRequest
-from message_pb2 import ImageRequest
-from message_pb2 import ClearRequest
+from .message_pb2 import HyperionRequest
+from .message_pb2 import HyperionReply
+from .message_pb2 import ColorRequest
+from .message_pb2 import ImageRequest
+from .message_pb2 import ClearRequest
 
 class Hyperion(object):
     '''Hyperion connection class
@@ -90,7 +90,7 @@ class Hyperion(object):
         imageRequest = request.Extensions[ImageRequest.imageRequest]
         imageRequest.imagewidth = width
         imageRequest.imageheight = height
-        imageRequest.imagedata = str(data)
+        imageRequest.imagedata = bytes(data)
         imageRequest.priority = priority
         imageRequest.duration = duration
 
@@ -117,7 +117,7 @@ class Hyperion(object):
         request = HyperionRequest()
         request.command = HyperionRequest.CLEARALL
 
-        # send the message 
+        # send the message
         self.__sendMessage(request)
         
     def __sendMessage(self, message):
