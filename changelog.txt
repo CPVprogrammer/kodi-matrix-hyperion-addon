@@ -1,5 +1,5 @@
 1.0.3
-- remove protobuf library
+- Kodi Matrix - change from python 2 to python 3
 1.0.2
 - Translate to DE and extend description
 - New icon and fanart
@@ -8,4 +8,3 @@
 - Kodi V17 fix thanks to @bimsarck and @iLLiac4
 1.0.0
 - initial addon release
-
