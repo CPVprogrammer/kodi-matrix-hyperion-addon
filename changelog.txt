@@ -1,3 +1,5 @@
+1.0.4
+- Kodi Matrix - fix exit kodi delay
 1.0.3
 - Kodi Matrix - change from python 2 to python 3
 1.0.2
