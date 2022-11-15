@@ -43,7 +43,9 @@ if  __name__ == "__main__":
     state = DisconnectedState(settings)
     
     # start looping
-    while not settings.abort:
+    monitor = xbmc.Monitor()
+    while not monitor.abortRequested():
+    # while not settings.abort:
         # execute the current state
         next_state = state.execute()
         
