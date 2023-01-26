@@ -1,3 +1,5 @@
+1.0.5
+- Kodi Nexus - deprecated function
 1.0.4
 - Kodi Matrix - fix exit kodi delay
 1.0.3
