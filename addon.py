@@ -23,6 +23,7 @@
 '''
 
 import xbmc
+import xbmcvfs
 import xbmcaddon
 import xbmcgui
 import os
@@ -30,7 +31,7 @@ import os
 # Add the library path before loading Hyperion
 __addon__      = xbmcaddon.Addon()
 __cwd__        = __addon__.getAddonInfo('path')
-sys.path.append(xbmc.translatePath(os.path.join(__cwd__, 'resources', 'lib')))
+sys.path.append(xbmcvfs.translatePath(os.path.join(__cwd__, 'resources', 'lib')))
         
 from settings import Settings
 from state import DisconnectedState
